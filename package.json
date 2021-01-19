@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "@codesee/babel-plugin-instrument": "^0.7.0",
+    "@codesee/tracker": "^0.7.0",
     "cross-env": "^5.1.4",
+    "react-app-rewired": "^1.6.2",
     "react-scripts": "1.1.1"
   },
   "dependencies": {
@@ -23,9 +26,9 @@
     "superagent-promise": "^1.1.0"
   },
   "scripts": {
-    "start": "cross-env PORT=4100 react-scripts start",
-    "build": "react-scripts build",
-    "test": "cross-env PORT=4100 react-scripts test --env=jsdom",
+    "start": "cross-env PORT=4100 react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "cross-env PORT=4100 react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject"
   }
 }
